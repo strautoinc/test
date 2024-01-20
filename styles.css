@@ -704,7 +704,7 @@ select:focus {
 /* Tablets (Portrait and Landscape) */
 @media only screen and (max-width: 600px) {
     .main-banner .container {
-        background-size: 800px;
+        background-size: 600px;
 
     }
     .banner-text h1 {
