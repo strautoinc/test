@@ -679,57 +679,11 @@ select:focus {
 }
 
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media screen and (max-width: 600px) {
-    body {
-        font-size: 0.8rem;
-        
-    }
-    .main-banner .container {
-        width: 100%;
-        max-width: 600px;
-    }
-    .banner-content {
-        position: relative;
-        line-height: 1rem;
-    }
-    .banner-text h1 {
-        font-size: 1.5rem;
-    }
-    .banner-text p {
-        font-size: 0.8rem;
-    }
-    .btn {
-        font-size: 0.8rem;
-    }
-    .btn-main {
-        font-size: 0.8rem;
-    }
-    .modalApp .container {
-        width: 100%;
-        max-width: 600px;
-    }
-    .modalDialog .container {
-        width: 100%;
-        max-width: 600px;
-    }
-
-
-    
-}
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
-/* Tablets (Portrait and Landscape) */
 /* Tablets (Portrait and Landscape) */
 @media only screen and (min-width: 600px) and (max-width: 992px) {
+    
     .main-banner .container {
-        height: auto;
+        height: 50vh;
     }
     .banner-text h1 {
         font-size: 1.8rem;
@@ -744,6 +698,7 @@ select:focus {
     }
     #nav-menu {
         top: 10px;
+        padding: 10%;
     }
     .modalDialog > div {
         width: 80%;
@@ -755,7 +710,7 @@ select:focus {
 /* Smartphones (Portrait and Landscape) */
 @media only screen and (max-width: 600px) {
     .main-banner .container {
-        height: auto;
+        height: 50vh;
         background-size: cover;
         background-position: center;
     }
@@ -772,6 +727,7 @@ select:focus {
     }
     #nav-menu {
         top: 10px;
+        padding: 10%;
     }
     .modalDialog > div, .modalApp .container {
         width: 100%;
