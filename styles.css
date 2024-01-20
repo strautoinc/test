@@ -27,7 +27,6 @@ body {
     background-repeat:repeat;
     background-attachment: fixed;
     color: #fff;
-    /* filter:blur(2px) */
 }
 
 a {
@@ -101,29 +100,15 @@ img {
 }
 
 .main-banner .container {
-    /* margin: 5%; */
     background-size: cover ;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-image: url(images/fon.jpg);
-    /* background-color: #00000068;
-    background-blend-mode: overlay; */
-    z-index: 5;
-}
-.main-banner .container::after{
-    content:"";
-    position:fixed; /* stretch a fixed position to the whole screen */
-    top:0;
-    height:100vh; /* fix for mobile browser address bar appearing disappearing */
-    left:0;
-    right:0;
-    z-index:-5; /* needed to keep in the background */
-    background-image: url(images/fon.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-image: url(images/fon.jpg);
+    z-index: 5;
 }
 
 .banner-content {
