@@ -111,7 +111,7 @@ img {
     background-blend-mode: overlay; */
     z-index: 5;
 }
-.main-banner::after{
+.main-banner .container::after{
     content:"";
     position:fixed; /* stretch a fixed position to the whole screen */
     top:0;
