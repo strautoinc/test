@@ -153,7 +153,7 @@ img {
 /* Modals*/
 
 .modalDialog {
-    position: relative;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
@@ -178,7 +178,6 @@ img {
     align-items: center;
     text-align: center;
     padding-top: 1%;
-    border-radius: 10px;
     background-color: hsl(0, 0%, 100%);
     background: -moz-linear-gradient(#000000, #0d0d0da4);
     background: -webkit-linear-gradient(#000000c8, #37353583);
@@ -241,7 +240,7 @@ select:focus {
 }
 
 .modalApp {
-    position: relative;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
@@ -266,11 +265,10 @@ select:focus {
     width: 85%;
     height: auto;
     position: relative;
-    /*margin: 10% auto;*/
+    margin: 10% auto;
     align-items: center;
     text-align: center;
-    /*padding-top: 1%;*/
-    border-radius: 10px;
+    padding-top: 1%;
     background-color: hsl(0, 0%, 100%);
     background: -moz-linear-gradient(#000000, #0d0d0da4);
     background: -webkit-linear-gradient(#000000c8, #37353583);
@@ -720,7 +718,7 @@ select:focus {
         margin: 0;
     }
     .modalApp .container {
-        border-radius: 0;
+        margin-top: 10%;
     }
 }
 
