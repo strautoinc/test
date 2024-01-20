@@ -99,7 +99,7 @@ img {
 
 .main-banner .container {
     margin: 5%;
-    height: 100vh;
+    height: 800px;
     display: flex;
     flex-direction: column-reverse;    
     background-size: contain;
