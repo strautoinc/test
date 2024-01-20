@@ -25,8 +25,9 @@ body {
     background-blend-mode:hue;
     background-color: #2c3b3fcf;
     background-repeat:repeat;
-    background-attachment:fixed;
+    background-attachment: fixed;
     color: #fff;
+    /* filter:blur(2px) */
 }
 
 a {
@@ -46,7 +47,7 @@ img {
 #nav-menu {
     background-color: var(--dark-color);
     width: 100%;
-    z-index: 1000;
+    z-index: 9;
     transition: 0.5s;
     margin-top: 0;
 
@@ -99,23 +100,15 @@ img {
     padding: 0 15px;
 }
 
-/* .main-banner .container {
-    height: 100vh;
-    background-position: bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-image: url(images/IMAGE\ 2024-01-18\ 23:54:57.jpg);
-    background-color: #00000068;
-    background-blend-mode: overlay;
-} */
-
 .main-banner .container {
-    background-size: 1920px ;
+    /* margin: 5%; */
+    background-size: cover ;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-image: url(images/truck1.png);
+    background-image: url(images/fon.jpg);
+    /* background-color: #00000068;
+    background-blend-mode: overlay; */
     z-index: 5;
 }
 .main-banner::after{
@@ -125,8 +118,8 @@ img {
     height:100vh; /* fix for mobile browser address bar appearing disappearing */
     left:0;
     right:0;
-    z-index:-1; /* needed to keep in the background */
-    background-image: url(images/truck1.png);
+    z-index:-5; /* needed to keep in the background */
+    background-image: url(images/fon.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -182,7 +175,7 @@ img {
     bottom: 0;
     left: 0;
     background: rgba(53, 52, 52, 0.674);
-    z-index: 99999;
+    z-index: 100;
     opacity:0;
     -webkit-transition: opacity 400ms ease-in;
     -moz-transition: opacity 400ms ease-in;
@@ -200,6 +193,7 @@ img {
     align-items: center;
     text-align: center;
     padding-top: 1%;
+    border-radius: 10px;
     background-color: hsl(0, 0%, 100%);
     background: -moz-linear-gradient(#000000, #0d0d0da4);
     background: -webkit-linear-gradient(#000000c8, #37353583);
@@ -268,7 +262,7 @@ select:focus {
     bottom: 0;
     left: 0;
     background: rgba(53, 52, 52, 0.674);
-    z-index: 99999;
+    z-index: 100;
     opacity:0;
     -webkit-transition: opacity 400ms ease-in;
     -moz-transition: opacity 400ms ease-in;
@@ -291,6 +285,7 @@ select:focus {
     align-items: center;
     text-align: center;
     padding-top: 1%;
+    border-radius: 10px;
     background-color: hsl(0, 0%, 100%);
     background: -moz-linear-gradient(#000000, #0d0d0da4);
     background: -webkit-linear-gradient(#000000c8, #37353583);
@@ -527,6 +522,7 @@ select:focus {
     color: #ffff;
     text-transform: uppercase;
     letter-spacing: 1px;
+    z-index: 9;
 }
 
 .footer i {
@@ -716,11 +712,12 @@ select:focus {
   
 }
 /* Tablets (Portrait and Landscape) */
-@media only screen and (max-width: 600px) {
-    .main-banner .container {
-/*         background-size: 600px; */
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+}
 
-    }
+/* Smartphones (Portrait and Landscape) */
+@media only screen and (max-width: 600px) {
+
     .banner-text h1 {
         font-size: 1.5rem;
     }
