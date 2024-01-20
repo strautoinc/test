@@ -103,7 +103,7 @@ img {
     /* margin: 5%; */
     height: 100vh;
     background-position: center;
-    background-size: auto;
+    background-size: contain;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-image: url(images/fon.jpg);
