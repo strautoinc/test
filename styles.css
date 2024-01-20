@@ -102,7 +102,7 @@ img {
     height: 100vh;
     display: flex;
     flex-direction: column-reverse;    
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -148,7 +148,7 @@ img {
 /* Modals*/
 
 .modalDialog {
-    position: fixed;
+    position: relative;
     top: 0;
     right: 0;
     bottom: 0;
@@ -236,7 +236,7 @@ select:focus {
 }
 
 .modalApp {
-    position: fixed;
+    position: relative;
     top: 0;
     right: 0;
     bottom: 0;
@@ -260,7 +260,7 @@ select:focus {
 .modalApp .container {
     width: 85%;
     height: auto;
-    /* position: relative; */
+    position: relative;
     margin: 10% auto;
     align-items: center;
     text-align: center;
