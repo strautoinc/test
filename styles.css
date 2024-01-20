@@ -698,9 +698,6 @@ select:focus {
 
 /* Smartphones (Portrait and Landscape) */
 @media only screen and (max-width: 600px) {
-    .main-banner .container {
-        height: 60%;
-    }
     .banner-text h1 {
         font-size: 1.5rem;
     }
@@ -712,9 +709,7 @@ select:focus {
         
     }
     .modalDialog > div, .modalApp .container {
-        width: 100%;
-        height: 100%;
-        margin: 0;
+        margin-top: 10%;
     }
     .modalApp .container {
         margin-top: 10%;
@@ -723,9 +718,6 @@ select:focus {
 
 /* Adjustments for both Tablets and Smartphones */
 @media only screen and (max-width: 992px) {
-    .modalDialog > div, .modalApp .container {
-        height: 50%;
-    }
     .menu-btn {
         display: none;
         
