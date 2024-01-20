@@ -114,7 +114,7 @@ img {
     background-size: 1920px ;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scrooll;
     background-image: url(images/truck1.png);
     z-index: 5;
 }
