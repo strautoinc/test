@@ -102,11 +102,13 @@ img {
 .main-banner .container {
     /* margin: 5%; */
     height: 100vh;
-    background-position: center;
-    background-size: contain;
+    background-position: bottom;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-image: url(images/fon.jpg);
+    background-image: url(images/IMAGE\ 2024-01-18\ 23:54:57.jpg);
+    background-color: #00000068;
+    background-blend-mode: overlay;
 }
 
 
