@@ -1,0 +1,790 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #e9622ddf;
+    --dark-color: #000000d1;
+    --light-color: #ccc;
+    --back-color: #bec4cc;
+    --text-stroke-color: royalblue;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    background-image: url(images/str.png);
+    background-size: 10%;
+    background-blend-mode:hue;
+    background-color: #2c3b3fcf;
+    background-repeat:repeat;
+    background-attachment:fixed;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Navbar */
+
+#nav-menu {
+    background-color: var(--dark-color);
+    background-size: contain;
+    background-position: center;
+    background-blend-mode: overlay;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: 0.5s;
+}
+
+.fixed-nav nav {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+#nav-menu .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#nav-menu .menu ul {
+    display: flex;
+}
+
+#nav-menu .menu ul li a{
+    color: #fff;
+    display: block;
+    padding:10px;
+    margin: 10px;
+    transition: 0.5s;
+    text-decoration: none;
+
+}
+
+#nav-menu ul li a:hover {
+    opacity: 0.8;
+    color: var(--primary-color);
+
+}
+.logo {
+    margin-top: 1%;
+}
+
+/* Banner */
+
+.main-banner {
+    margin: 0;
+    padding: 0 15px;
+}
+
+.main-banner .container {
+    margin: 5%;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(images/fon.jpg);
+}
+
+
+.banner-content {
+    font-family: 'Nunito', sans-serif;
+    align-items: center;
+    line-height: 2rem;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 15%;
+}
+
+.banner-text {
+    letter-spacing: 10px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.148);
+}
+.banner-text h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 2.2rem;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.banner-text p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.1rem;
+    padding-top: 0.5%;
+    color: #ffffff;
+    border-top: 1px solid var(--primary-color);
+    text-transform: uppercase;
+}
+
+.main-buttons {
+    margin: 10px;
+}
+
+/* Modals*/
+
+
+.modalDialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(53, 52, 52, 0.674);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    width: 400px;
+    height: 550px;
+    position: relative;
+    margin: 10% auto;
+    align-items: center;
+    text-align: center;
+    padding-top: 1%;
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 100%);
+    background: -moz-linear-gradient(#000000, #0d0d0da4);
+    background: -webkit-linear-gradient(#000000c8, #37353583);
+    background: -o-linear-gradient(#0d0d0d8f, #000000c5);
+}
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+    background: var(--primary-color);
+}
+
+.modalDialog  input,
+textarea,
+select {
+    font-family: 'Nunito', sans-serif;
+    width: 70%;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    color: #000000 ;
+    background-color: #dcd7d7;
+}
+
+
+.modalDialog .modal-form input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
+}
+
+.modalDialog .modal-form input[type="date"] {
+    width: 70%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    color: #000000;
+    background-color: #dcd7d7;
+    
+    margin: 5px ;
+}
+
+.modalApp {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(53, 52, 52, 0.674);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    overflow: auto;
+
+}
+
+.modalApp:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.modalApp .container {
+    width: 85%;
+    height: auto;
+    /* position: relative; */
+    margin: 10% auto;
+    align-items: center;
+    text-align: center;
+    padding-top: 1%;
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 100%);
+    background: -moz-linear-gradient(#000000, #0d0d0da4);
+    background: -webkit-linear-gradient(#000000c8, #37353583);
+    background: -o-linear-gradient(#0d0d0d8f, #000000c5);
+
+}
+
+.modal-header {
+    line-height: 2rem;
+    font-size: 1rem;
+    border-top: #ff9000 1px solid;
+    border-bottom: #ff9000 1px solid;
+    color: #fff;
+    margin: 5%;
+}
+
+.modalApp  input,
+select {
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    padding: 8px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    color: #000000 ;
+    background-color: #dcd7d7;
+}
+
+.modalApp input:focus,
+select:focus {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
+}
+
+.modalApp textarea {
+    width: 80%;
+    padding: 8px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    color: #000000 ;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    background-color: #dcd7d7;
+}
+
+.modalApp input[type="date"] {
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    color: #000000;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    background-color: #dcd7d7;
+    margin: 5px ;
+}
+
+::placeholder {
+    color: #000000;
+    opacity: 1;
+}
+
+
+.name {
+    width: 80%;
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 1%;
+}
+
+.info {
+    width: 80%;
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 1%;
+
+}
+
+.address {
+    width: 80%;
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 1%;
+}
+.info-more {
+    width: 80%;
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 1%;
+}
+
+#city{
+    width: 75%
+}
+
+#state{
+    width: 25%;
+}
+#zip{
+    width: 30%;
+}
+#DLstate {
+    width: 33%;
+}
+.dl {
+    width: 80%;
+    display: inline-flex;
+    justify-content: space-between;
+
+}
+
+.toggles {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 1%;
+    grid-template-rows: repeat(3, 1fr); 
+}
+
+.question {
+    font-size: 1.1rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    margin-left: 22%;
+}
+.Q {
+    padding: 2% 0;
+}
+
+
+/* Switch Toggles */
+.toggle {
+    --width: 60px;
+    --height: calc(var(--width) / 3);
+
+    position: relative;
+    display: inline-block;
+    width: var(--width);
+    height: var(--height);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+
+  .toggle input {
+    display: none;
+  }
+
+  .toggle .labels {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .toggle .labels::after {
+    content: attr(data-off);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #000000;
+    border-radius: 8px;
+    background-color: #f66565b0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease-in-out;
+  }
+
+  .toggle .labels::before {
+    content: attr(data-on);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
+    border-radius: 8px;
+    background-color: #28ca51c8;
+    text-align: center;
+    opacity: 0;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
+    transition: all 0.4s ease-in-out;
+  }
+
+  .toggle input:checked~.labels::after {
+    /* flip 180deg */
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
+
+  .toggle input:checked~.labels::before {
+    transform: rotateY(180deg) scale(-1, 1);
+    opacity: 1;
+  }
+
+
+
+
+/*Lottie */
+
+#LottieContainer {
+    width: 30%;
+    height: auto;
+}
+
+
+
+/* Footer */
+
+.footer {
+    background-color: #000000d1;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    position: sticky;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    padding: 10px 0;
+    color: #ffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer i {
+    margin-right: 20px;
+
+}
+
+.footer ul li {
+    margin-left: 15px;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer-navbar {
+    padding: 10px 0;
+    text-align: left;
+}
+
+.footer-navbar a {
+    color: var(--primary-color);
+    transition: 0.5s;
+}
+
+.footer-navbar a:hover {
+    color: #fff;
+}
+
+.footer .contact a {
+    color: var(--primary-color);
+    transition: 0.5s;
+}
+
+.dot {
+    text-align: right;
+}
+
+.social ul {
+    display: flex;
+}
+
+.social ul li a {
+    color: #fff;
+    transition: 0.5s;
+}
+
+.social ul li a:hover {
+    color: var(--primary-color);
+}
+
+.footer .contact {
+    text-align: left;
+    justify-self: center;
+    margin-left: 5px;
+}
+
+.footer .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.footer-grid .dot {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.footer-grid .footer-menu {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.footer-grid .contact {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.footer .footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+/* Utility Classes */
+
+.container {
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-fluid {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-sm {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Text Classes */
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-xxl {
+    font-size: 2.5rem;
+}
+
+.text-xl {
+    font-size: 2rem;
+}
+
+.text-lg {
+    font-size: 1.5rem;
+}
+
+.text-md {
+    font-size: 1.2rem;
+}
+
+.text-sm {
+    font-size: 1rem;
+}
+
+.text-xs {
+    font-size: 0.8rem;
+}
+
+/* Button Classes */
+
+.btn {
+    background-color: var(--light-color);
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.btn-main {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.btn:hover {
+    opacity: 0.8;
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-main:hover {
+    opacity: 0.8;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 0.8rem;
+        
+    }
+    .main-banner .container {
+        width: 100%;
+        max-width: 600px;
+    }
+    .banner-content {
+        position: relative;
+        line-height: 1rem;
+    }
+    .banner-text h1 {
+        font-size: 1.5rem;
+    }
+    .banner-text p {
+        font-size: 0.8rem;
+    }
+    .btn {
+        font-size: 0.8rem;
+    }
+    .btn-main {
+        font-size: 0.8rem;
+    }
+    .modalApp .container {
+        width: 100%;
+        max-width: 600px;
+    }
+    .modalDialog .container {
+        width: 100%;
+        max-width: 600px;
+    }
+
+
+    
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+/* Tablets (Portrait and Landscape) */
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+    .main-banner .container {
+        height: auto;
+    }
+    .banner-text h1 {
+        font-size: 1.8rem;
+    }
+    .banner-text p {
+        font-size: 1rem;
+    }
+    .btn, .btn-main {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+    #nav-menu {
+        top: 10px;
+    }
+    .modalDialog > div {
+        width: 80%;
+        height: auto;
+        margin: 10% auto;
+    }
+}
+
+/* Smartphones (Portrait and Landscape) */
+@media only screen and (max-width: 600px) {
+    .main-banner .container {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    .banner-text h1 {
+        font-size: 1.5rem;
+    }
+    .banner-text p {
+        font-size: 0.8rem;
+    }
+    .btn, .btn-main {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+    #nav-menu {
+        top: 10px;
+    }
+    .modalDialog > div, .modalApp .container {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+    .modalApp .container {
+        border-radius: 0;
+    }
+}
+
+/* Adjustments for both Tablets and Smartphones */
+@media only screen and (max-width: 992px) {
+    .modalDialog > div, .modalApp .container {
+        width: 80%;
+        height: auto;
+        margin: 10% auto;
+    }
+}
