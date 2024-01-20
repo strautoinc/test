@@ -99,8 +99,7 @@ img {
     padding: 0 15px;
 }
 
-.main-banner .container {
-    /* margin: 5%; */
+/* .main-banner .container {
     height: 100vh;
     background-position: bottom;
     background-size: cover;
@@ -109,8 +108,16 @@ img {
     background-image: url(images/IMAGE\ 2024-01-18\ 23:54:57.jpg);
     background-color: #00000068;
     background-blend-mode: overlay;
-}
+} */
 
+.main-banner .container {
+    background-size: 1920px ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(images/truck1.png);
+    z-index: 5;
+}
 
 .banner-content {
     display: grid;
@@ -695,11 +702,11 @@ select:focus {
   
 }
 /* Tablets (Portrait and Landscape) */
-@media only screen and (min-width: 600px) and (max-width: 992px) {
-}
-
-/* Smartphones (Portrait and Landscape) */
 @media only screen and (max-width: 600px) {
+    .main-banner .container {
+        background-size: 800px;
+
+    }
     .banner-text h1 {
         font-size: 1.5rem;
     }
@@ -710,16 +717,18 @@ select:focus {
         display: none;
         
     }
-    .modalDialog > div, .modalApp .container {
-        margin-top: 10%;
-    }
-    .modalApp .container {
-        margin-top: 10%;
-    }
 }
 
 /* Adjustments for both Tablets and Smartphones */
 @media only screen and (max-width: 992px) {
+    .main-banner .container {
+        background-size: 990px;
+
+    }
+
+    .modalDialog > div, .modalApp .container {
+        height: auto;
+    }
     .menu-btn {
         display: none;
         
