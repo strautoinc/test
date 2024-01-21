@@ -501,8 +501,8 @@ select:focus {
 /* Footer */
 
 .footer {
+    width: 100%;
     display: flex;
-    position: sticky;
     background-color: #000000d1;
     font-size: 0.9rem;
     line-height: 1.2rem;
@@ -569,13 +569,14 @@ select:focus {
 }
 
 .footer .footer-grid {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 3fr);
     gap: 5px;
 }
 
 .footer-grid .dot {
-    grid-column: 3;
+    grid-column: 5;
     grid-row: 2;
 }
 
@@ -585,7 +586,7 @@ select:focus {
 }
 
 .footer-grid .contact {
-    grid-column: 2;
+    grid-column: 3;
     grid-row: 2;
 }
 
@@ -705,14 +706,164 @@ select:focus {
 
 /* Smartphones (Portrait and Landscape) */
 @media only screen and (max-width: 600px) {
+    
     .menu-btn {
         display: none;
         
+    }
+    .footer-navbar{
+        display: none;
+    }
+    .footer-grid .footer-menu .social ul {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: start;
+    }
+    .footer-grid .footer-menu .social ul li a i{
+        padding: 7%;
+    }
+    .footer .footer-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        gap: 10px;
+    }
+
+    .dot{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .dot img {
+        width: 30%;
+    }
+    .contact{
+        display: flexbox;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+    .contact i{
+        display: none;
+    }
+    
+    .footer-grid .dot {
+        grid-row: 2;
+        grid-column: 5;
+    }
+    
+    .footer-grid .footer-menu {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .footer-grid .contact {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    
+    .footer .footer-bottom {
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+}
+
+/* Adjustments for both Tablets and Smartphones */
+@media only screen and (max-width: 992px) {
+    .menu-btn {
+        display: none;
+    }
+    .footer-navbar {
+        display: none;
     }
     .footer .footer-grid {
         display: grid;
         grid-template-columns: repeat(3, 2fr);
         gap: 5px;
+    }
+    .footer-grid .social {
+        font-size: 1.4rem;
+
+    }
+    .footer-grid .footer-menu .social ul {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: start;
+    }
+    .footer-grid .footer-menu .social ul li a i{
+        padding: 7%;
+    }
+
+    .dot{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .dot img {
+        width: 30%;
+    }
+    .contact{
+        display: flexbox;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+    .contact i{
+        display: none;
+    }
+
+    .footer-grid .dot {
+        grid-row: 2;
+        grid-column: 3;
+    }
+
+    .footer-grid .footer-menu {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .footer-grid .contact {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .footer .footer-bottom {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+
+}
+
+@supports (-webkit-touch-callout: none) {
+    .menu-btn {
+        display: none;  
+    }    
+    .footer-navbar {
+        display: none;
+    }
+    .footer .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 3fr);
+        gap: 5px;
+    }
+    .footer-grid .footer-menu .social ul {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: start;
+    }
+    .footer-grid .footer-menu .social ul li a i{
+        padding: 7%;
     }
 
     .dot{
@@ -740,38 +891,18 @@ select:focus {
         grid-row: 2;
         grid-column: 3;
     }
-    
-    .footer-grid .footer-menu {
-        grid-column: 1;
-        grid-row: 2;
-    }
-    
+ 
+
     .footer-grid .contact {
         grid-column: 2;
         grid-row: 2;
     }
+
     
     .footer .footer-bottom {
         text-align: center;
         padding: 10px 0;
     }
-    
+
+
 }
-
-/* Adjustments for both Tablets and Smartphones */
-@media only screen and (max-width: 992px) {
-    .main-banner .container {
-        background-size: 990px;
-
-    }
-    
-
-    .menu-btn {
-        display: none;
-        
-    }
-}
-@supports (-webkit-touch-callout: none) {
-    /* CSS specific to iOS devices */ 
- }
-
