@@ -17,6 +17,8 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Nunito', sans-serif;
     font-size: 1.2rem;
     line-height: 1.2;
@@ -27,6 +29,7 @@ body {
     background-repeat:repeat;
     background-attachment: fixed;
     color: #fff;
+    /* filter:blur(2px) */
 }
 
 a {
@@ -95,6 +98,7 @@ img {
 /* Banner */
 
 .main-banner {
+    width: 100%;
     margin: 0;
     padding: 0 15px;
 }
@@ -110,6 +114,7 @@ img {
     background-image: url(images/fon.jpg);
     z-index: 5;
 }
+
 
 .banner-content {
     display: grid;
@@ -496,6 +501,7 @@ select:focus {
 /* Footer */
 
 .footer {
+    display: flex;
     background-color: #000000d1;
     font-size: 0.9rem;
     line-height: 1.2rem;
@@ -701,17 +707,57 @@ select:focus {
     .main-banner .container {
         top: 25%;
     }
-
-    .banner-text h1 {
-        font-size: 1.5rem;
-    }
-    .banner-text p {
-        font-size: 0.8rem;
-    }
     .menu-btn {
         display: none;
         
     }
+    .footer .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        gap: 5px;
+    }
+
+    .dot{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .dot img {
+        width: 30%;
+    }
+    .contact{
+        display: flexbox;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+    .contact i{
+        display: none;
+    }
+    
+    .footer-grid .dot {
+        grid-row: 2;
+        grid-column: 3;
+    }
+    
+    .footer-grid .footer-menu {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .footer-grid .contact {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    
+    .footer .footer-bottom {
+        text-align: center;
+        padding: 10px 0;
+    }
+    
 }
 
 /* Adjustments for both Tablets and Smartphones */
@@ -720,12 +766,14 @@ select:focus {
         background-size: 990px;
 
     }
+    
 
-    .modalDialog > div, .modalApp .container {
-        height: auto;
-    }
     .menu-btn {
         display: none;
         
     }
 }
+@supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */ 
+ }
+
