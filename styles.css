@@ -502,6 +502,7 @@ select:focus {
 
 .footer {
     display: flex;
+    position: fixed;
     background-color: #000000d1;
     font-size: 0.9rem;
     line-height: 1.2rem;
