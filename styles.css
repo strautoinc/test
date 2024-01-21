@@ -176,7 +176,7 @@ img {
     pointer-events: auto;
 }
 .modalDialog > div {
-    width: 85%;
+    width: 35%;
     position: relative;
     margin: 10% auto;
     align-items: center;
@@ -267,8 +267,8 @@ select:focus {
     pointer-events: auto;
 }
 
-.modalApp .container {
-    width: 75%;
+.modalApp > div {
+    width: 85%;
     height: auto;
     position: relative;
     margin: 10% auto;
@@ -508,7 +508,7 @@ select:focus {
     font-size: 0.9rem;
     line-height: 1.2rem;
     padding: 10px 0;
-    color: #ffff;
+    color: var(--light-color);
     letter-spacing: 1px;
     z-index: 9;
 }
@@ -539,6 +539,7 @@ select:focus {
 
 .footer-navbar a:hover {
     color: #fff;
+    cursor: pointer;
 }
 
 .footer .contact a {
@@ -549,13 +550,16 @@ select:focus {
 .dot {
     text-align: right;
 }
+.dot img {
+    opacity: 0.6;
+}
 
 .social ul {
     display: flex;
 }
 
 .social ul li a {
-    color: #fff;
+    color: var(--light-color);
     transition: 0.5s;
 }
 
@@ -688,89 +692,11 @@ select:focus {
     cursor: pointer;
 }
 
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media screen and (max-width: 600px) {}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  
-}
-/* Tablets (Portrait and Landscape) */
-@media only screen and (min-width: 600px) and (max-width: 992px) {
-}
-
 /* Smartphones (Portrait and Landscape) */
 @media only screen and (max-width: 600px) {
-   #nav-menu{
-        padding: 5%;
-    }
-    #nav-menu .logo {
-        width: 150px;
-    }
-    .menu i{
-        font-size: 1.5rem;
-        padding: 7px;
-    }
     .menu-btn {
-        display: none; 
-    }
-    .main-banner .container {
-        background-size: contain ;
-        -webkit-background-size: contain;
-        -moz-background-size: contain;
-        -o-background-size: contain;
-        background-position: top;
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        background-image: url(images/fon.jpg);
-        z-index: 5;
-    }
-    .banner-content{
-        margin-top: 12%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 5px;
-    }
-    .banner-content .banner-text{
-        margin-top: 70%;
-    }
-    .banner-text p{
-        font-size: 0.9rem;
-    }
-    .banner-text h1{
-        font-size: 1.7rem;
-    }
-    .btn {    
-        background-color: var(--light-color);
-        padding: 7px 13px;
-        border: none;
-        color: #000;
-        outline: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: 0.5s;
-        font-size: 0.8rem;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-    .btn-main {
-        background-color: var(--primary-color);
-        color: #fff;
-    }
-    .main-buttons{
-        margin-top: 5%;
-        font-size: 0.6rem;
-        display: inline-flex;
-        justify-content: space-evenly;
-
+        display: none;
+        
     }
     .footer-navbar{
         display: none;
@@ -836,6 +762,10 @@ select:focus {
 
 /* Adjustments for both Tablets and Smartphones */
 @media only screen and (max-width: 992px) {
+    body {
+        background-color: #303030;
+        background-blend-mode:color-burn;
+    }
     #nav-menu{
         padding: 5%;
     }
@@ -861,7 +791,7 @@ select:focus {
         z-index: 5;
     }
     .banner-content{
-        margin-top: 12%;
+        margin-top: 17%;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -898,7 +828,56 @@ select:focus {
         font-size: 0.6rem;
         display: inline-flex;
         justify-content: space-evenly;
-
+    }
+    .modalApp > div {
+        width: 95%;
+    }
+    .modal-header {
+        line-height: 1.5rem;
+        font-size: 0.9rem;
+        border-top: #ff9000 0.6px solid;
+        border-bottom: #ff9000 0.6px solid;
+    }
+    
+    .modalApp  input,
+    select {
+        width: 100%;
+        font-size: 0.6rem;
+        padding: 5px;
+        margin: 2px;
+        border-radius: 5px;
+    }
+    
+    .modalApp input:focus,
+    select:focus {
+        border-radius: 5px;
+    }
+    
+    .modalApp textarea {
+        width: 80%;
+        padding: 5px;
+        margin: 2px;
+        border-radius: 5px;
+        font-size: 0.6rem;
+    }
+    .modalApp input[type="date"] {
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 0.6rem;
+        background-color: #dcd7d7;
+        margin: 2px ;
+    }
+    .question {
+        font-size: 0.7rem;
+        flex-direction: column;
+        align-items: start;
+        text-align: start;
+        flex-wrap: wrap;
+        margin-left: 20%;
+    } 
+    .footer {
+        font-size:0.8rem ;
+        color: var(--light-color);
     }
     .footer-navbar{
         display: none;
@@ -920,12 +899,12 @@ select:focus {
     }
 
     .dot{
-        display: inline-flex;
-        justify-content: center;
+        display: flex;
         align-items: center;
-        text-align: center;
+        text-align: left;
     }
     .dot img {
+        margin-right: 10px ;
         width: 30%;
     }
     .contact{
@@ -963,69 +942,9 @@ select:focus {
 }
 
 @supports (-webkit-touch-callout: none) {
-    #nav-menu{
-        padding: 5%;
-    }
-    #nav-menu .logo {
-        width: 150px;
-    }
-    .menu i{
-        font-size: 1.5rem;
-        padding: 7px;
-    }
     .menu-btn {
-        display: none; 
-    }
-    .main-banner .container {
-        background-size: contain ;
-        -webkit-background-size: contain;
-        -moz-background-size: contain;
-        -o-background-size: contain;
-        background-position: top;
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        background-image: url(images/fon.jpg);
-        z-index: 5;
-    }
-    .banner-content{
-        margin-top: 12%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 5px;
-    }
-    .banner-content .banner-text{
-        margin-top: 70%;
-    }
-    .banner-text p{
-        font-size: 0.9rem;
-    }
-    .banner-text h1{
-        font-size: 1.7rem;
-    }
-    .btn {    
-        background-color: var(--light-color);
-        padding: 7px 13px;
-        border: none;
-        color: #000;
-        outline: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: 0.5s;
-        font-size: 0.8rem;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-    .btn-main {
-        background-color: var(--primary-color);
-        color: #fff;
-    }
-    .main-buttons{
-        margin-top: 5%;
-        font-size: 0.6rem;
-        display: inline-flex;
-        justify-content: space-evenly;
-
+        display: none;
+        
     }
     .footer-navbar{
         display: none;
