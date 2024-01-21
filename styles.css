@@ -702,6 +702,9 @@ select:focus {
 
 /* Smartphones (Portrait and Landscape) */
 @media only screen and (max-width: 600px) {
+    .main-banner .container {
+        top: 25%;
+    }
 
     .banner-text h1 {
         font-size: 1.5rem;
