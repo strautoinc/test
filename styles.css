@@ -705,9 +705,6 @@ select:focus {
 
 /* Smartphones (Portrait and Landscape) */
 @media only screen and (max-width: 600px) {
-    .main-banner .container {
-        top: 25%;
-    }
     .menu-btn {
         display: none;
         
