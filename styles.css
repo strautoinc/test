@@ -514,6 +514,7 @@ select:focus {
 }
 
 .footer i {
+    font-size: 1.3rem;
     margin-right: 20px;
 
 }
@@ -777,18 +778,10 @@ select:focus {
 @media only screen and (max-width: 992px) {
     .menu-btn {
         display: none;
+        
     }
-    .footer-navbar {
+    .footer-navbar{
         display: none;
-    }
-    .footer .footer-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 2fr);
-        gap: 5px;
-    }
-    .footer-grid .social {
-        font-size: 1.4rem;
-
     }
     .footer-grid .footer-menu .social ul {
         display: flex;
@@ -798,6 +791,12 @@ select:focus {
     }
     .footer-grid .footer-menu .social ul li a i{
         padding: 7%;
+    }
+    .footer .footer-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        gap: 10px;
     }
 
     .dot{
@@ -820,41 +819,36 @@ select:focus {
     .contact i{
         display: none;
     }
-
+    
     .footer-grid .dot {
         grid-row: 2;
-        grid-column: 3;
+        grid-column: 5;
     }
-
+    
     .footer-grid .footer-menu {
         grid-column: 1;
         grid-row: 2;
     }
-
+    
     .footer-grid .contact {
         grid-column: 2;
         grid-row: 2;
     }
-
+    
     .footer .footer-bottom {
         text-align: center;
         padding: 10px 0;
     }
-
-
+    
 }
 
 @supports (-webkit-touch-callout: none) {
     .menu-btn {
-        display: none;  
-    }    
-    .footer-navbar {
         display: none;
+        
     }
-    .footer .footer-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 3fr);
-        gap: 5px;
+    .footer-navbar{
+        display: none;
     }
     .footer-grid .footer-menu .social ul {
         display: flex;
@@ -864,6 +858,12 @@ select:focus {
     }
     .footer-grid .footer-menu .social ul li a i{
         padding: 7%;
+    }
+    .footer .footer-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        gap: 10px;
     }
 
     .dot{
@@ -889,20 +889,22 @@ select:focus {
     
     .footer-grid .dot {
         grid-row: 2;
-        grid-column: 3;
+        grid-column: 5;
     }
- 
-
+    
+    .footer-grid .footer-menu {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
     .footer-grid .contact {
         grid-column: 2;
         grid-row: 2;
     }
-
     
     .footer .footer-bottom {
         text-align: center;
         padding: 10px 0;
     }
-
-
+    
 }
