@@ -156,46 +156,14 @@ img {
 }
 
 /* Modals*/
-
-.modalDialog {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(53, 52, 52, 0.674);
-    z-index: 100;
-    opacity:0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    pointer-events: none;
-}
-.modalDialog:target {
-    opacity:1;
-    pointer-events: auto;
-}
-.modalDialog > div {
-    width: 35%;
-    position: relative;
-    margin: 10% auto;
-    align-items: center;
-    text-align: center;
-    padding-top: 1%;
-    border-radius: 10px;
-    background-color: hsl(0, 0%, 100%);
-    background: -moz-linear-gradient(#000000, #0d0d0da4);
-    background: -webkit-linear-gradient(#000000c8, #37353583);
-    background: -o-linear-gradient(#0d0d0d8f, #000000c5);
-}
 .close {
     background: #606061;
     color: #FFFFFF;
     line-height: 25px;
     position: absolute;
-    right: -12px;
+    right: -2px;
     text-align: center;
-    top: -10px;
+    top: -5px;
     width: 24px;
     text-decoration: none;
     font-weight: bold;
@@ -210,39 +178,163 @@ img {
     background: var(--primary-color);
 }
 
-.modalDialog  input,
-textarea,
-select {
-    font-family: 'Nunito', sans-serif;
-    width: 80%;
-    text-transform: uppercase;
-    padding: 10px;
-    margin: 5px;
-    border: none;
+.modalDialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(53, 52, 52, 0.674);
+    z-index: 100;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    overflow: auto;
+
+}
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    width: 75%;
+    position: relative;
+    margin: 10% auto;
+    align-items: center;
+    text-align: center;
+    padding-top: 1%;
     border-radius: 10px;
-    color: #000000 ;
-    background-color: #dcd7d7;
+    background-color: hsl(0, 0%, 100%);
+    background: -moz-linear-gradient(#000000, #0d0d0da4);
+    background: -webkit-linear-gradient(#000000c8, #37353583);
+    background: -o-linear-gradient(#0d0d0d8f, #000000c5);
 }
 
+.modalDialog .modal-header {
+    line-height: 2rem;
+    font-size: 1rem;
+    border-top: #ff9000 1px solid;
+    border-bottom: #ff9000 1px solid;
+    color: #fff;
+    margin: 5%;
+}
+.modalDialog .modal-body {
+    display: flex;
+    flex-direction: column; 
+}
+.zip{
+    display: inline-flex;
+    justify-content: space-between;
+    margin:1% 3%;
+}
+.person{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:1% 3%;
 
-.modalDialog .modal-form input:focus,
-textarea:focus,
-select:focus {
+}
+.modalDialog .modal-body  label {
+    font-family: 'Nunito', sans-serif;
+    text-transform: none;
+    font-size: 0.9rem;
+    padding-top: 2%;
+    /* border-bottom: 1px solid var(--primary-color); */
+    /* color: #ff9000; */
+}
+.modalDialog .modal-body p{
+    font-family: 'Nunito', sans-serif;
+    text-transform: none;
+    font-size: 1.1rem;
+    margin: 5% 0;
+    padding: 5% 0;
+    border-bottom: 1px solid #ff9000;
+    border-top: 1px solid var(--light-color);
+}
+
+.modalDialog .modal-body input {
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    width: 87%;
+    font-family: 'Nunito', sans-serif;
+    text-transform: none;
+    font-size: 0.9rem;
+    padding: 5px;
+    border: var(--light-color) 1px solid;
+    border-radius: 5px;
+    color: #fff ;
+    background: transparent;
+}
+.modalDialog .modal-body input:focus {
     outline: none;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
+}
+.modalDialog .modal-body textarea {
+    width: 95%;
+    padding: 5px;
+    text-transform: none;
+    margin: 5px;
+    border: var(--light-color) 1px solid;
+    border-radius: 5px;
+    color: #fff ;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9rem;
+    background: transparent;
+    text-align: start;
+}
+.modalDialog .modal-body  input[type="date"] {
+    padding: 5px;
+    width: 57%;
+    border: none;
+    border-radius: 5px;
+    border: var(--light-color) 1px solid;
+    color: #000000;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9rem;
+    background: transparent;
+}
+
+.modalDialog .modal-body input[type="date"]:focus {
+    outline: none;
+    border: none;
+    border-radius: 5px;
     box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
 }
 
-.modalDialog .modal-form input[type="date"] {
-    width: 70%;
-    padding: 10px;
+.modalDialog .modal-body  select {
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    width: 57%;
+    font-family: 'Nunito', sans-serif;
+    text-transform: none;
+    font-size: 0.9rem;
+    padding: 5px;
+    border: var(--light-color) 1px solid;
+    border-radius: 5px;
+    color: var(--light-color) ;
+    background: transparent;
+}
+.modalDialog .modal-body select:focus {
+    outline: none;
     border: none;
-    border-radius: 10px;
-    color: #000000;
-    background-color: #dcd7d7;
-    
-    margin: 5px ;
+    border-radius: 5px;
+    box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
+}
+
+.modalDialog .modal-body ::placeholder,
+.modalDialog .modal-body  ::-webkit-input-placeholder {
+    color: var(--light-color);
+    opacity: 1;
+}
+.modalDialog .modal-body input[type="date"]{
+    color: var(--light-color);
+    opacity: 1;
 }
 
 .modalApp {
@@ -268,14 +360,15 @@ select:focus {
 }
 
 .modalApp > div {
-    width: 85%;
+    width: 100%;
     height: auto;
     position: relative;
-    margin: 10% auto;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 1%;
-    border-radius: 10px;
+    padding: 5%;
+    margin: 5% auto;
+    border-radius: 5px;
     background-color: hsl(0, 0%, 100%);
     background: -moz-linear-gradient(#000000, #0d0d0da4);
     background: -webkit-linear-gradient(#000000c8, #37353583);
@@ -292,203 +385,141 @@ select:focus {
     margin: 5%;
 }
 
-.modalApp  input,
-select {
-    width: 100%;
-    font-family: 'Nunito', sans-serif;
-    text-transform: none;
-    font-size: 1rem;
-    padding: 8px;
-    margin: 5px;
-    border: none;
-    border-radius: 10px;
-    color: #000000 ;
-    background-color: #dcd7d7;
-}
-
-.modalApp input:focus,
-select:focus {
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
-}
-
-.modalApp textarea {
-    width: 80%;
-    padding: 8px;
-    text-transform: none;
-    margin: 5px;
-    border: none;
-    border-radius: 10px;
-    color: #000000 ;
-    font-family: 'Nunito', sans-serif;
-    font-size: 1rem;
-    background-color: #dcd7d7;
-}
-
-.modalApp input[type="date"] {
-    padding: 8px;
-    border: none;
-    border-radius: 10px;
-    color: #000000;
-    font-family: 'Nunito', sans-serif;
-    font-size: 1rem;
-    background-color: #dcd7d7;
-    margin: 5px ;
-}
-
-::placeholder {
-    color: #000000;
-    opacity: 1;
-}
-
-
-.name {
-    width: 80%;
-    display: inline-flex;
-    justify-content: space-between;
-    margin: 1%;
-}
-
-.info {
-    width: 80%;
-    display: inline-flex;
-    justify-content: space-between;
-    margin: 1%;
-
-}
-
-.address {
-    width: 80%;
-    display: inline-flex;
-    justify-content: space-between;
-    margin: 1%;
-}
-.info-more {
-    width: 80%;
-    display: inline-flex;
-    justify-content: space-between;
-    margin: 1%;
-}
-
-#city{
-    width: 75%
-}
-
-#state{
-    width: 25%;
-}
-#zip{
-    width: 30%;
-}
-#DLstate {
-    width: 33%;
-}
-.dl {
-    width: 80%;
-    display: inline-flex;
-    justify-content: space-between;
-
-}
-
-.toggles {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    margin: 1%;
-    grid-template-rows: repeat(3, 1fr); 
-}
-
-.question {
-    font-size: 1.1rem;
-    color: #fff;
+.modalApp .modal-body .modal-form{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
-    flex-wrap: wrap;
-    margin-left: 22%;
-}
-.Q {
-    padding: 2% 0;
-}
-
-
-/* Switch Toggles */
-.toggle {
-    --width: 60px;
-    --height: calc(var(--width) / 3);
-
-    position: relative;
-    display: inline-block;
-    width: var(--width);
-    height: var(--height);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-  }
-
-  .toggle input {
-    display: none;
-  }
-
-  .toggle .labels {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    font-weight: 600;
-    transition: all 0.4s ease-in-out;
-  }
-
-  .toggle .labels::after {
-    content: attr(data-off);
-    position: absolute;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    color: #000000;
-    border-radius: 8px;
-    background-color: #f66565b0;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-    transition: all 0.4s ease-in-out;
-  }
-
-  .toggle .labels::before {
-    content: attr(data-on);
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    color: #ffffff;
-    border-radius: 8px;
-    background-color: #28ca51c8;
     text-align: center;
-    opacity: 0;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
-    transition: all 0.4s ease-in-out;
-  }
 
-  .toggle input:checked~.labels::after {
-    /* flip 180deg */
-    transform: rotateY(180deg);
-    opacity: 0;
-  }
-
-  .toggle input:checked~.labels::before {
-    transform: rotateY(180deg) scale(-1, 1);
+}
+.modalApp .modal-body .modal-form  label {
+    font-family: 'Nunito', sans-serif;
+    text-transform: none;
+    font-size: 1rem;
+    padding-top: 2%;
+}
+.modalApp .modal-body .modal-form  input {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 66%;
+    font-family: 'Nunito', sans-serif;
+    text-transform: none;
+    font-size: 0.8rem;
+    padding: 5px;
+    border-radius: 5px;
+    border: #fff 1px solid;
+    color: #fff ;
+    background: transparent;
+}
+.modalApp .modal-body .modal-form  input::placeholder,
+textarea::placeholder{
+    color: var(--light-color);
     opacity: 1;
-  }
+}
 
+.modalApp .modal-body  input:focus {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
+}
+.modalApp .modal-body textarea {
+    width: 66%;
+    padding: 5px;
+    text-transform: none;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.8rem;
+    border: #fff 1px solid;
+    color: var(--light-color) ;
+    background: transparent;}
 
+.modalApp .modal-body textarea:focus {
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
+    }
+
+.modalApp .modal-body input[type="date"] {
+    padding: 5px;
+    border-radius: 5px;
+    color: #000000;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.8rem;
+    border: #fff 1px solid;
+    color: #fff;
+    background: transparent;
+}
+.modalApp .modal-body input[type="date"]:focus {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
+}
+
+.modalApp .modal-body select {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 66%;
+    font-family: 'Nunito', sans-serif;
+    text-transform: none;
+    font-size: 0.8rem;
+    padding: 5px;
+    border-radius: 5px;
+    border: #fff 1px solid;
+    color: var(--light-color) ;
+    background: transparent;
+}
+
+.modalApp .modal-body select:focus {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 0 0.2rem rgba(220, 117, 28, 0.652);
+}
+
+.toggles input[type="radio"] {
+    display: none;  
+}
+.toggles label{
+    padding: 5px 10px;
+    border: thin solid darkorange;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+.toggles label:hover{
+    cursor: pointer;
+}
+.toggles .question{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+    flex-wrap: wrap;
+}   
+
+.toggles input[type="radio"]:checked + label{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.Q{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8rem;
+}
 
 
 /*Lottie */
@@ -691,6 +722,20 @@ select:focus {
     color: #000;
     cursor: pointer;
 }
+.btn-app{
+    background-color: #fb7d0e36;
+    padding: 10px 20px;
+    border: thin solid #ff9000;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Nunito', sans-serif;
+}
+.btn-app:hover{
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+}
 
 /* Smartphones (Portrait and Landscape) */
 @media only screen and (max-width: 600px) {
@@ -829,52 +874,6 @@ select:focus {
         display: inline-flex;
         justify-content: space-evenly;
     }
-    .modalApp > div {
-        width: 95%;
-    }
-    .modal-header {
-        line-height: 1.5rem;
-        font-size: 0.9rem;
-        border-top: #ff9000 0.6px solid;
-        border-bottom: #ff9000 0.6px solid;
-    }
-    
-    .modalApp  input,
-    select {
-        width: 100%;
-        font-size: 0.6rem;
-        padding: 5px;
-        margin: 2px;
-        border-radius: 5px;
-    }
-    
-    .modalApp input:focus,
-    select:focus {
-        border-radius: 5px;
-    }
-    
-    .modalApp textarea {
-        width: 80%;
-        padding: 5px;
-        margin: 2px;
-        border-radius: 5px;
-        font-size: 0.6rem;
-    }
-    .modalApp input[type="date"] {
-        padding: 5px;
-        border-radius: 5px;
-        font-size: 0.6rem;
-        background-color: #dcd7d7;
-        margin: 2px ;
-    }
-    .question {
-        font-size: 0.7rem;
-        flex-direction: column;
-        align-items: start;
-        text-align: start;
-        flex-wrap: wrap;
-        margin-left: 20%;
-    } 
     .footer {
         font-size:0.8rem ;
         color: var(--light-color);
